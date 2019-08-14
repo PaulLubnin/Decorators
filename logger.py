@@ -16,10 +16,6 @@ def logger(path):
         return new_function
     return log
 
-def foo():
-    pass
-
-
 @logger('logs.txt')
 def polish_notation(operand):
     operand_list = operand.split(' ')
@@ -39,5 +35,5 @@ def polish_notation(operand):
         print(f'{type(e)},{e}')
 
 
-while True:
+if __name__ == '__main__':
     polish_notation(input('Введите оператора и операндов через пробел: '))
